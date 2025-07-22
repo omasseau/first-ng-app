@@ -1,0 +1,34 @@
+header {
+    display: flex; // Makes the header a flex container, allowing flexible layout of its child elements.
+    padding-inline: 16px; // Adds horizontal padding (left and right) of 16px inside the header.
+    padding-block: 8px; // Adds vertical padding (top and bottom) of 8px inside the header.
+    background-color: #333; // Sets the background color of the header to a dark gray (#333).
+    color: white; // Sets the text color inside the header to white for better contrast.
+    align-items: center; // Vertically aligns the child elements of the header to the center.
+    justify-content: space-between; // Horizontally distributes the child elements with space between them.
+
+    nav { // Selects the navigation element inside the header.
+        width: 100%; // Sets the width of the navigation to 100% of its parent container, making it full-width.
+        display: flex; // Makes the navigation a flex container, allowing flexible layout of its child elements.
+        justify-content: space-between; // Distributes the child elements of the nav with space between them.
+        align-items: center; // Vertically aligns the child elements of the nav to the center.
+
+        > span { // Selects the first child span element of the nav.
+            cursor: pointer; // Changes the cursor to a pointer when hovering over the list item, indicating it's clickable.
+            &:hover {
+                color: #777; // Changes the text color to a lighter gray (#777) when hovering over the list item.
+            }
+        }
+
+        ul { // Selects the unordered list inside the nav.
+            list-style: none; // Removes the default bullet points from the list items.
+
+            li { // Selects each list item inside the unordered list.
+                cursor: pointer; // Changes the cursor to a pointer when hovering over the list item, indicating it's clickable.
+                &:hover {
+                    color: #777; // Changes the text color to a lighter gray (#777) when hovering over the list item.
+                }
+            }
+        }
+    }
+}
